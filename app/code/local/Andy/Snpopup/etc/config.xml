@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config>
+<modules>
+    <Andy_Snpopup>
+        <version>0.1.0</version>
+    </Andy_Snpopup>
+</modules>
+<frontend>
+    <layout>
+        <updates>
+            <snpopup>
+                <file>snpopup.xml</file>
+            </snpopup>
+        </updates>
+    </layout>
+</frontend>
+<global>
+    <blocks>
+        <snpopup>
+            <class>Andy_Snpopup_Block</class>
+        </snpopup>
+    </blocks>
+</global>
+</config>

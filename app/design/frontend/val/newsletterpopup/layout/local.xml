@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<!-- If it's in your root/js folder -->
+<action method="addItem"><type>js</type><name>val/jquery-noconflict.js</name></action>
+
+        <!-- If it's in your theme/js folder -->
+<action method="addItem"><type>skin_js</type><name>js/val/jquery-noconflict.js</name></action>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config>
+<modules>
+    <Andrew_Andata>
+        <version>0.1.0</version>
+    </Andrew_Andata>
+</modules>
+
+<frontend>
+    <layout>
+        <updates>
+            <andata>
+                <file>andata.xml</file>
+            </andata>
+        </updates>
+    </layout>
+</frontend>
+<global>
+    <blocks>
+        <andata>
+            <class>Andrew_Andata_Block</class>
+        </andata>
+    </blocks>
+</global>
+</config>

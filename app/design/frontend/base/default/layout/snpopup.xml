@@ -1,0 +1,7 @@
+<layout version="0.1.0">
+<default>
+    <reference name="head">
+        <block type="core/template" name="snpopup" template="snpopup/index.phtml" />
+    </reference>
+</default>
+</layout>

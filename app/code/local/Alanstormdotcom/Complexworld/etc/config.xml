@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Alanstormdotcom_Complexworld>
+            <version>0.1.0</version>
+        </Alanstormdotcom_Complexworld>
+    </modules>
+    <frontend>
+        <routers>
+            <weblogeav>
+                <use>standard</use>
+                <args>
+                    <module>Alanstormdotcom_Complexworld</module>
+                    <frontName>weblogeav</frontName>
+                </args>
+            </weblogeav>
+        </routers>
+    </frontend>
+    <global>
+        <!-- ... -->
+        <models>
+            <!-- ... -->
+            <complexworld>
+                <class>Alanstormdotcom_Complexworld_Model</class>
+                <resourceModel>complexworld_resource</resourceModel>
+            </complexworld>
+            <!-- ... -->
+            <complexworld_resource>
+                <class>Alanstormdotcom_Complexworld_Model_Resource</class>
+                <entities>
+                    <eavblogpost>
+                        <table>eavblog_posts</table>
+                    </eavblogpost>
+                </entities>
+            </complexworld_resource>
+        </models>
+        <!-- ... -->
+
+    </global>
+</config>

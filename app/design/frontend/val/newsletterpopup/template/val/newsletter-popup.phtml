@@ -1,0 +1,56 @@
+<script type="text/javascript">
+
+    jQuery(document).ready(function() {
+
+        var check_cookie = "<?php echo Mage::getModel('core/cookie')->get('popup-shown'); ?>";
+
+        if(!check_cookie) {
+            beginNewsletterForm();
+            <?php Mage::getModel('core/cookie')->set('popup-shown', 'true', 5);?>
+        }
+    });
+
+    function beginNewsletterForm () {
+        jQuery.fancybox({
+            'width': '910',
+            'height': '450',
+            'padding': '0px',
+            'autoDimensions': false,
+            'autoScale': false,
+            'autoSize': false,
+            'transitionIn': 'fade',
+            'transitionOut': 'fade',
+            'showCloseButton': true,
+            'type': 'inline',
+            'href': '#newsletter-popup'
+        });
+        jQuery("#newsletter-popup").trigger('click');
+    }
+</script>
+
+<div style="display:none;">
+    <div id="newsletter-popup" class="container">
+        <div class="sub-container">
+            <div class="content">
+                <div class="register-form">
+                    <form id="newsletter-registration-form" action="<?php echo $this->getUrl('newsletter/subscriber/new/') ?>" method="post" id="newsletter-validate-detail">
+
+                        <div class="form-fields-middle">
+                            <div class="input-wrapper">
+                                <input name="email" id="cm_email" onfocus="if(this.value=='Enter Your Email') this.value=''" onblur="if(this.value=='') this.value='Enter Your Email'" class="validate-email required-entry field-left" type="text" value="Enter Your Email" />
+                            </div>
+                        </div>
+                        <div class="btn-sign-up-now">
+                            <input type="submit" class="button" value="Sign Up" />
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var newsletterSubscriberFormDetail = new VarienForm('newsletter-refistration-form', true);
+</script>
